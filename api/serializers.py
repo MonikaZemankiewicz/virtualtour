@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Video
+from .models import Video, Image
 from django.contrib.auth.models import User
 from rest_framework.authtoken.views import Token
 
@@ -7,7 +7,13 @@ from rest_framework.authtoken.views import Token
 class VideoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Video
-        fields = ['id', 'title', 'description']
+        fields = ['id', 'title', 'description', 'cover', 'video']
+
+
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = ['id', 'title', 'description', 'image']
 
 
 class UserSerializer(serializers.ModelSerializer):
