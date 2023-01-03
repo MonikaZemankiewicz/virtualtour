@@ -6,7 +6,7 @@ from taggit.managers import TaggableManager
 
 class Video(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField(max_length=400, default='Description...')
+    description = models.TextField(max_length=400)
     cover = models.ImageField(upload_to='covers')
     video = models.TextField()
     # video = models.FileField(upload_to='videos')
