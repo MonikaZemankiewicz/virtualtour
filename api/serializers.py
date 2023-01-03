@@ -8,20 +8,20 @@ from taggit.serializers import (TagListSerializerField,
 
 class VideoSerializer(TaggitSerializer, serializers.ModelSerializer):
 
-    tags = TagListSerializerField()
+    # tags = TagListSerializerField()
 
     class Meta:
         model = Video
-        fields = ['id', 'title', 'description', 'cover', 'video', 'tags']
+        fields = ['id', 'title', 'description', 'cover', 'video']
 
 
 class ImageSerializer(TaggitSerializer, serializers.ModelSerializer):
 
-    tags = TagListSerializerField()
+    # tags = TagListSerializerField()
 
     class Meta:
         model = Image
-        fields = ['id', 'title', 'description', 'image', 'tags']
+        fields = ['id', 'title', 'description', 'image']
 
 
 class UserSerializer(serializers.ModelSerializer):

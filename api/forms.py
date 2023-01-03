@@ -9,5 +9,4 @@ class ImageForm(forms.ModelForm):
             'title',
             'description',
             'image',
-            'tags',
         ]
