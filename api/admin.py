@@ -9,9 +9,11 @@ from .models import Video, Image
 class VideoModel(admin.ModelAdmin):
     list_filter = ('title', 'description')
     list_display = ('title', 'description')
+    search_fields = ('title', 'description')
 
 
 @admin.register(Image)
 class ImageModel(admin.ModelAdmin):
     list_filter = ('title', 'description')
     list_display = ('title', 'description')
+    search_fields = ('title', 'description')
