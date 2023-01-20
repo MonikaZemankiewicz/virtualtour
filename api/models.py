@@ -9,6 +9,7 @@ class Video(models.Model):
     description = models.TextField(max_length=400)
     cover = models.ImageField(upload_to='covers')
     video = models.TextField()
+    owner = models.CharField(max_length=200)
     # video = models.FileField(upload_to='videos')
     # tags = TaggableManager()
 
@@ -20,6 +21,7 @@ class Image(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(max_length=400, default='Description...')
     image = models.ImageField(upload_to='images')
+    owner = models.CharField(max_length=200)
     # tags = TaggableManager()
 
     def __str__(self):
