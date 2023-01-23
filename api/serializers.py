@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Video, Image
+from .models import Video, Image, VirtualTour
 from django.contrib.auth.models import User
 from rest_framework.authtoken.views import Token
 from taggit.serializers import (TagListSerializerField,
@@ -22,6 +22,15 @@ class ImageSerializer(TaggitSerializer, serializers.ModelSerializer):
     class Meta:
         model = Image
         fields = ['id', 'title', 'description', 'image', 'owner']
+
+
+class VirtualTourSerializer(TaggitSerializer, serializers.ModelSerializer):
+
+    # tags = TagListSerializerField()
+
+    class Meta:
+        model = VirtualTour
+        fields = ['id', 'title', 'description', 'image', 'owner', 'link']
 
 
 class UserSerializer(serializers.ModelSerializer):
