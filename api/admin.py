@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Video, Image
+from .models import Video, Image, VirtualTour
 # Register your models here.
 
 # admin.site.register(Video)
@@ -14,6 +14,13 @@ class VideoModel(admin.ModelAdmin):
 
 @admin.register(Image)
 class ImageModel(admin.ModelAdmin):
+    list_filter = ('title', 'description')
+    list_display = ('title', 'description')
+    search_fields = ('title', 'description')
+
+
+@admin.register(VirtualTour)
+class VirtualTourModel(admin.ModelAdmin):
     list_filter = ('title', 'description')
     list_display = ('title', 'description')
     search_fields = ('title', 'description')
