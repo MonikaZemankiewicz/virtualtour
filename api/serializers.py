@@ -12,7 +12,7 @@ class VideoSerializer(TaggitSerializer, serializers.ModelSerializer):
 
     class Meta:
         model = Video
-        fields = ['id', 'title', 'description', 'cover', 'video', 'owner']
+        fields = ['id', 'title', 'description', 'image', 'video', 'owner']
 
 
 class ImageSerializer(TaggitSerializer, serializers.ModelSerializer):
