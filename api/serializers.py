@@ -2,11 +2,9 @@ from rest_framework import serializers
 from .models import Video, Image, VirtualTour
 from django.contrib.auth.models import User
 from rest_framework.authtoken.views import Token
-from taggit.serializers import (TagListSerializerField,
-                                TaggitSerializer)
 
 
-class VideoSerializer(TaggitSerializer, serializers.ModelSerializer):
+class VideoSerializer(serializers.ModelSerializer):
 
     # tags = TagListSerializerField()
 
@@ -15,7 +13,7 @@ class VideoSerializer(TaggitSerializer, serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'image', 'video', 'owner']
 
 
-class ImageSerializer(TaggitSerializer, serializers.ModelSerializer):
+class ImageSerializer(serializers.ModelSerializer):
 
     # tags = TagListSerializerField()
 
@@ -24,7 +22,7 @@ class ImageSerializer(TaggitSerializer, serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'image', 'owner']
 
 
-class VirtualTourSerializer(TaggitSerializer, serializers.ModelSerializer):
+class VirtualTourSerializer(serializers.ModelSerializer):
 
     # tags = TagListSerializerField()
 
