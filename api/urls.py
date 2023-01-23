@@ -8,7 +8,7 @@ from django.conf import settings
 router = DefaultRouter()
 router.register('videos', VideoViewSet, basename='videos')
 router.register('images', ImageViewSet, basename='images')
-router.register('images', VirtualTourViewSet, basename='virtualtours')
+router.register('vitrualtours', VirtualTourViewSet, basename='virtualtours')
 router.register('users', UserViewSet)
 
 urlpatterns = [
